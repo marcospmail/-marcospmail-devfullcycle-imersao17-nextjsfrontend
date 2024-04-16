@@ -8,16 +8,14 @@ type SelectCategoryProps = {
   categories: Category[]
 }
 
-export function SelectCategory(props: SelectCategoryProps) {
+export function SelectCategory(props: Readonly<SelectCategoryProps>) {
   return (
     <FormControl size="small" sx={{ width: 200 }}>
       <Select
         name="select-category"
         sx={{ backgroundColor: grey[400] }}
-        onChange={(event) => {
-          {
-          }
-        }}
+        value={0}
+        // onChange={(event) => {}}
       >
         <MenuItem value="0">Todas as categorias</MenuItem>
         {props.categories.map((category) => (
